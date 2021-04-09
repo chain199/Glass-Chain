@@ -1,6 +1,19 @@
-# 底层框架
-光学链自主研发的区块链系统GXL， 采用适用于商业发展的多种共识机制，高度模块化, 大幅降低区块链的开发及维护成本，其延时低，吞吐量大等多项优势，适合私链、联盟链的应用，快速实现一键搭载公链，实现链改的便捷优势
+[![API Reference](
+https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
+)](https://godoc.org/github.com/33cn/chain33)
+[![pipeline status](https://api.travis-ci.org/33cn/chain33.svg?branch=master)](https://travis-ci.org/33cn/chain33/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/33cn/chain33)](https://goreportcard.com/report/github.com/33cn/chain33)
+ [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/33cn/chain33?svg=true&branch=master&passingText=Windows%20-%20OK&failingText=Windows%20-%20failed&pendingText=Windows%20-%20pending)](https://ci.appveyor.com/project/33cn/chain33)
+[![codecov](https://codecov.io/gh/33cn/chain33/branch/master/graph/badge.svg)](https://codecov.io/gh/33cn/chain33) [![Join the chat at https://gitter.im/33cn/Lobby](https://badges.gitter.im/33cn/Lobby.svg)](https://gitter.im/33cn/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+
+# GXL 区块链开发框架(为了适合go module 的版本号标准 最新版本号改为: 1.65.0)
+
+光学链自主研发的区块链系统Chain199， 采用适用于商业发展的多种共识机制，高度模块化, 大幅降低区块链的开发及维护成本，其延时低，吞吐量大等多项优势，适合私链、联盟链的应用，快速实现一键搭载公链，实现链改的便捷优势
+
+官方插件库: https://github.com/njbst/plugin
+
+典型案例: https://github.com/bityuan/bityuan
 
 ## Building from source
 
@@ -9,8 +22,8 @@
 编译:
 
 ```shell
-git clone https://github.com/njbst/chain33.git $GOPATH/src/github.com/njbst/chain33
-cd $GOPATH/src/github.com/njbst/chain33
+git clone https://github.com/njbst/GXL.git $GOPATH/src/github.com/njbst/GXL
+cd $GOPATH/src/github.com/njbst/GXL
 //国内用户需要导入一下代理
 export GOPROXY=https://mirrors.aliyun.com/goproxy
 make
@@ -33,7 +46,6 @@ $ make test
 ```shell
 $ chain33 -f chain33.toml
 ```
-
 ## 贡献代码
 
 我们先说一下代码贡献的细节流程，这些流程可以不看，用户可以直接看我们贡献代码简化流程
@@ -41,16 +53,16 @@ $ chain33 -f chain33.toml
 ### 细节过程
 
 * 如果有什么想法，建立 issues, 和我们来讨论。
-* 首先点击 右上角的 fork 图标， 把chain33 fork 到自己的分支 比如我的是 vipwzw/chain33
-* `git clone https://github.com/vipwzw/chain33.git $GOPATH/src/github.com/33cn/chain33`
+* 首先点击 右上角的 fork 图标， 把GXL fork 到自己的分支 比如我的是 xxx/GXL
+* `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/xxx/GXL`
 
 ```
-注意：这里要 clone 到 $GOPATH/src/github.com/33cn/chain33, 否则go 包路径会找不到
+注意：这里要 clone 到 $GOPATH/src/github.com/xxx/GXL, 否则go 包路径会找不到
 ```
 
-* 添加 `33cn/chain33` 远端分支： `git remote add upstream https://github.com/33cn/chain33.git`  我已经把这个加入了 Makefile 可以直接 运行 `make addupstream` 
+* 添加 `xxx/GXL` 远端分支： `git remote add upstream https://github.com/xxx/GXL.git`  我已经把这个加入了 Makefile 可以直接 运行 `make addupstream` 
 
-* 保持 `33cn/chain33` 和 `vipwzw/chain33` master 分支的同步，可以直接跑 `make sync` , 或者执行下面的命令
+* 保持 `xxx/GXL` 和 `xxx/GXL` master 分支的同步，可以直接跑 `make sync` , 或者执行下面的命令
 
 ```
 git fetch upstream
@@ -61,7 +73,7 @@ git merge upstream/master
 注意：不要去修改 master 分支，这样，master 分支永远和upstream/master 保持同步
 ```
 
-* 从最新的33cn/chain33代码建立分支开始开发
+* 从最新的xxx/GXL代码建立分支开始开发
 
 ```
 git fetch upstream
@@ -70,7 +82,7 @@ git merge upstream/master
 git branch -b "fixbug_ci"
 ```
 
-* 开发完成后, push 到 `vipwzw/chain33`
+* 开发完成后, push 到 `xxx/GXL`
 
 ```
 git fetch upstream
@@ -87,11 +99,11 @@ git push origin fixbug_ci
 
 #### 准备阶段
 
-* 首先点击 右上角的 fork 图标， 把chain33 fork 到自己的分支 比如我的是 vipwzw/chain33
-* `git clone https://github.com/vipwzw/chain33.git $GOPATH/src/github.com/33cn/chain33`
+* 首先点击 右上角的 fork 图标， 把GXL fork 到自己的分支 比如我的是 xxx/GXL
+* `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/njbst/GXL`
 
 ```
-注意：这里要 clone 到 $GOPATH/src/github.com/33cn/chain33, 否则go 包路径会找不到
+注意：这里要 clone 到 $GOPATH/src/github.com/njbst/GXL, 否则go 包路径会找不到
 ```
 
 ```
@@ -114,12 +126,12 @@ make push b=mydevbranchname m="这个提交的信息"
 
 ## 修改别人的pull requset
 
-比如我要修改 name=libangzhu branch chain33-p2p-listenPort 的pr
+比如我要修改 name=libangzhu branch GXL-p2p-listenPort 的pr
 
 ##### step1: 拉取要修改的分支
 
 ```
-make pull name=libangzhu b=chain33-p2p-listenPort
+make pull name=libangzhu b=GXL-p2p-listenPort
 ```
 
 然后修改代码，修改完成后,并且在本地commit
@@ -127,7 +139,7 @@ make pull name=libangzhu b=chain33-p2p-listenPort
 ###### step2: push已经修改好的内容
 
 ```
-make pullpush name=libangzhu b=chain33-p2p-listenPort
+make pullpush name=libangzhu b=GXL-p2p-listenPort
 ```
 
 ## License
