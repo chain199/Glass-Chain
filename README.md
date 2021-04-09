@@ -1,33 +1,6 @@
 # 底层框架
-光学链自主研发的区块链系统Chain199， 采用适用于商业发展的多种共识机制，高度模块化, 大幅降低区块链的开发及维护成本，其延时低，吞吐量大等多项优势，适合私链、联盟链的应用，快速实现一键搭载公链，实现链改的便捷优势
+光学链自主研发的区块链系统GXL， 采用适用于商业发展的多种共识机制，高度模块化, 大幅降低区块链的开发及维护成本，其延时低，吞吐量大等多项优势，适合私链、联盟链的应用，快速实现一键搭载公链，实现链改的便捷优势
 
-高度模块化, 遵循 KISS原则的区块链开发框架
-
-官方网站 和 文档: https://chain.33.cn
-
-官方插件库: https://github.com/33cn/plugin
-
-典型案例: https://github.com/bityuan/bityuan
-
-chain33背后故事: [chain33诞生记](https://mp.weixin.qq.com/s/9g5ZFDKJi9uzR_NFxfeuAA)
-
-视频教程: [视频教程](https://chain.33.cn/document/289)
-
-# 感谢
-
-[腾讯玄武安全实验室](https://github.com/33cn/chain33/issues?utf8=%E2%9C%93&q=label%3A%E8%85%BE%E8%AE%AF%E7%8E%84%E6%AD%A6%E5%AE%9E%E9%AA%8C%E5%AE%A4)
-
-# bug 奖励
-
-我们会对bug 评价4个等级(不会奖励人民币，等值虚拟资产)。
-只有影响现有在线运行系统的，并且会产生严重分叉等行为的，才会评价为 L3
-
-```
-L0 1000
-L1 3000
-L2 10000
-L3 20000
-```
 
 ## Building from source
 
@@ -36,8 +9,8 @@ L3 20000
 编译:
 
 ```shell
-git clone https://github.com/33cn/chain33.git $GOPATH/src/github.com/33cn/chain33
-cd $GOPATH/src/github.com/33cn/chain33
+git clone https://github.com/njbst/chain33.git $GOPATH/src/github.com/njbst/chain33
+cd $GOPATH/src/github.com/njbst/chain33
 //国内用户需要导入一下代理
 export GOPROXY=https://mirrors.aliyun.com/goproxy
 make
@@ -60,10 +33,6 @@ $ make test
 ```shell
 $ chain33 -f chain33.toml
 ```
-
-## 使用chain33 开发插件注意点
-
-* 不可以使用 master 分支，要使用 发布分支
 
 ## 贡献代码
 
