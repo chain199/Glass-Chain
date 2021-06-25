@@ -12,7 +12,7 @@ https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/6874
 Chain199, a blockchain system independently developed by optical chain, adopts a variety of consensus mechanisms suitable for commercial development, is highly modular, greatly reduces the development and maintenance costs of blockchain, and has many advantages, such as low delay and high throughput. It is suitable for the application of private chain and alliance chain, and quickly realizes the one click carrying of public chain to realize the convenient advantage of chain reform
 
 
-Official plug-in library：https://github.com/njbst/plugin
+Official plug-in library：https://github.com/CLASS-CHAIN/plugin
 Typical cases of official plug-in library: https://github.com/bityuan/bityuan
 
 ## Building from source
