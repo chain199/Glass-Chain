@@ -22,8 +22,8 @@ Environmental requirements: Go (version 1.13 or later)
 compile:
 
 ```shell
-git clone https://github.com/njbst/GXL.git $GOPATH/src/github.com/njbst/GXL
-cd $GOPATH/src/github.com/njbst/GXL
+git clone https://github.com/CLASS-CHAIN/GXL.git $GOPATH/src/github.com/CLASS-CHAIN/GXL
+cd $GOPATH/src/github.com/CLASS-CHAIN/GXL
 //Domestic users need to import agents
 export GOPROXY=https://mirrors.aliyun.com/goproxy
 make
