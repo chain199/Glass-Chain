@@ -7,19 +7,19 @@ https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/6874
 [![codecov](https://codecov.io/gh/33cn/chain33/branch/master/graph/badge.svg)](https://codecov.io/gh/33cn/chain33) [![Join the chat at https://gitter.im/33cn/Lobby](https://badges.gitter.im/33cn/Lobby.svg)](https://gitter.im/33cn/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-# GXL 区块链开发框架(为了适合go module 的版本号标准 最新版本号改为: 1.65.0)
+# GXL blockchain development framework (in order to adapt to the version number standard of go module, the latest version number is changed to 1.65.0)
 
-光学链自主研发的区块链系统Chain199， 采用适用于商业发展的多种共识机制，高度模块化, 大幅降低区块链的开发及维护成本，其延时低，吞吐量大等多项优势，适合私链、联盟链的应用，快速实现一键搭载公链，实现链改的便捷优势
+Chain199, a blockchain system independently developed by optical chain, adopts a variety of consensus mechanisms suitable for commercial development, is highly modular, greatly reduces the development and maintenance costs of blockchain, and has many advantages, such as low delay and high throughput. It is suitable for the application of private chain and alliance chain, and quickly realizes the one click carrying of public chain to realize the convenient advantage of chain reform
 
-官方插件库: https://github.com/njbst/plugin
 
-典型案例: https://github.com/bityuan/bityuan
+Official plug-in library：https://github.com/njbst/plugin
+Typical cases of official plug-in library: https://github.com/bityuan/bityuan
 
 ## Building from source
 
-环境要求: Go (version 1.13 or later)
+Environmental requirements: Go (version 1.13 or later)
 
-编译:
+compile:
 
 ```shell
 git clone https://github.com/njbst/GXL.git $GOPATH/src/github.com/njbst/GXL
