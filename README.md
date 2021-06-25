@@ -100,10 +100,10 @@ Then pull request is performed on the interface
 #### Preparation stage
 
 *First, click the fork icon in the upper right corner, GXL fork to your own branch,For example, mine is XXX / GXL
-* `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/njbst/GXL`
+* `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/CLASS-CHAIN/GXL`
 
 ```
-Note: you need to clone to $gopath / SRC / github.com/njbst/gxl, otherwise the go package path will not be found
+Note: you need to clone to $gopath / SRC / github.com/CLASS-CHAIN/gxl, otherwise the go package path will not be found
 ```
 
 ```
