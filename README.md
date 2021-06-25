@@ -24,45 +24,45 @@ compile:
 ```shell
 git clone https://github.com/njbst/GXL.git $GOPATH/src/github.com/njbst/GXL
 cd $GOPATH/src/github.com/njbst/GXL
-//国内用户需要导入一下代理
+//Domestic users need to import agents
 export GOPROXY=https://mirrors.aliyun.com/goproxy
 make
 ```
 
 ```
- 注意：国内用户需要加一下阿里云代理，用于获取依赖包， mod功能已经在Makefile默认开启了
+Note: domestic users need to add an alicloud agent to obtain dependency packages. The mod function is enabled by default in makefile
 ```
 
-测试：
+Test:
 
 ```shell
 $ make test
 ```
 
-## 运行
+## function
 
-通过这个命令可以运行一个单节点到环境，可以用于开发测试
+With this command, you can run a single node to the environment, which can be used for development and testing
 
 ```shell
 $ chain33 -f chain33.toml
 ```
-## 贡献代码
+## Contribution code
 
-我们先说一下代码贡献的细节流程，这些流程可以不看，用户可以直接看我们贡献代码简化流程
+Let's talk about the detailed process of code contribution first. Users can directly see the simplified process of code contribution without looking at these processes
 
-### 细节过程
+### Detailed process
 
-* 如果有什么想法，建立 issues, 和我们来讨论。
-* 首先点击 右上角的 fork 图标， 把GXL fork 到自己的分支 比如我的是 xxx/GXL
+* If you have any ideas, set up issues and discuss with us.
+* First, click the fork icon in the upper right corner to add GXL fork to your own branch. For example, mine is xxx/GXL
 * `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/xxx/GXL`
 
 ```
-注意：这里要 clone 到 $GOPATH/src/github.com/xxx/GXL, 否则go 包路径会找不到
+be careful:Here you need to clone to $gopath / SRC / github.com/xxx/gxl, otherwise the go package path will not be found
 ```
 
-* 添加 `xxx/GXL` 远端分支： `git remote add upstream https://github.com/xxx/GXL.git`  我已经把这个加入了 Makefile 可以直接 运行 `make addupstream` 
+* Add to `xxx/GXL` Distal branch： `git remote add upstream https://github.com/xxx/GXL.git`  I've added this to makefile and can run it directly `make addupstream` 
 
-* 保持 `xxx/GXL` 和 `xxx/GXL` master 分支的同步，可以直接跑 `make sync` , 或者执行下面的命令
+* To keep the 'xxx / GXL' and 'xxx / GXL' master branches synchronized, you can directly run 'make sync', or execute the following command
 
 ```
 git fetch upstream
@@ -70,10 +70,10 @@ git checkout master
 git merge upstream/master
 ```
 ```
-注意：不要去修改 master 分支，这样，master 分支永远和upstream/master 保持同步
+Note: do not modify the master branch. In this way, the master branch will always be synchronized with the upstream / master
 ```
 
-* 从最新的xxx/GXL代码建立分支开始开发
+* Start from the branch of the latest XXX / GXL code
 
 ```
 git fetch upstream
@@ -82,7 +82,7 @@ git merge upstream/master
 git branch -b "fixbug_ci"
 ```
 
-* 开发完成后, push 到 `xxx/GXL`
+* After development, push to `xxx/gxl`
 
 ```
 git fetch upstream
@@ -93,50 +93,50 @@ git merge master
 git push origin fixbug_ci
 ```
 
-然后在界面上进行pull request
+Then pull request is performed on the interface
 
-### 简化流程
+### Simplify the process
 
-#### 准备阶段
+#### Preparation stage
 
-* 首先点击 右上角的 fork 图标， 把GXL fork 到自己的分支 比如我的是 xxx/GXL
+*First, click the fork icon in the upper right corner, GXL fork to your own branch,For example, mine is XXX / GXL
 * `git clone https://github.com/xxx/GXL.git $GOPATH/src/github.com/njbst/GXL`
 
 ```
-注意：这里要 clone 到 $GOPATH/src/github.com/njbst/GXL, 否则go 包路径会找不到
+Note: you need to clone to $gopath / SRC / github.com/njbst/gxl, otherwise the go package path will not be found
 ```
 
 ```
 make addupstream
 ```
 
-#### 开始开发： 这个分支名称自己设置
+#### Start development: set the branch name by yourself
 
 ```
 make branch b=mydevbranchname
 ```
 
-#### 开发完成: push 
+#### Development completed: push 
 
 ```
-make push b=mydevbranchname m="这个提交的信息"
+make push b=mydevbranchname  m = "this submitted information"
 ```
 
-如果m不设置，那么不会执行 git commit 的命令
+If m is not set, the command git commit will not be executed
 
-## 修改别人的pull requset
+## Modify someone else's pull requse
 
-比如我要修改 name=libangzhu branch GXL-p2p-listenPort 的pr
+For example, I want to modify the PR of name = libangzhu branch gxl-p2p-listenport
 
-##### step1: 拉取要修改的分支
+##### Step1: pull the branch to be modified
 
 ```
 make pull name=libangzhu b=GXL-p2p-listenPort
 ```
 
-然后修改代码，修改完成后,并且在本地commit
+Then modify the code, and after the modification is completed, commit it locally
 
-###### step2: push已经修改好的内容
+###### Step 2: push the modified content
 
 ```
 make pullpush name=libangzhu b=GXL-p2p-listenPort
